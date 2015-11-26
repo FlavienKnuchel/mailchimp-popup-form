@@ -6,22 +6,43 @@ var pluginUrl = baseUrl + '/src/';
 var cssUrl = pluginUrl + '/css/style.css';
 loadjscssfile(cssUrl, 'css');
 
-var waitForLoad = function () {
-  //makes the script until jquery is loaded
-  if (typeof jQuery != "undefined") {
-    jQuery.noConflict();
-    mac_mailchimp();
-  } else {
-    window.setTimeout(waitForLoad, 200);
-  }
-};
 
-//launches the waiting function
-window.setTimeout(waitForLoad, 200);
+/*
+ This code can be used when the plugin is embedded in a page that already contains jquery
+ But then you have to comment the code under this one
+ var waitForLoad = function () {
+ //makes the script until jquery is loaded
+ if (typeof jQuery != "undefined") {
+ jQuery.noConflict();
+ mac_mailchimp();
+ } else {
+ window.setTimeout(waitForLoad, 200);
+ }
+ };
+ //launches the waiting function
+ window.setTimeout(waitForLoad, 200);
+ */
+
+//to comment if using the above code
+
+//this loads jquery if not already loaded
+if (typeof jQuery == 'undefined') {
+  var headTag = document.getElementsByTagName("head")[0];
+  var jqTag = document.createElement('script');
+  jqTag.type = 'text/javascript';
+  jqTag.src = 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js';
+  jqTag.onload = mac_mailchimp();
+  headTag.appendChild(jqTag);
+} else {
+  mac_mailchimp();
+}
+// end to comment
 
 
-var mac_mailchimp = function () {
+function mac_mailchimp() {
 //main function wil all the logic
+
+  jQuery.noConflict();
 
   jQuery(function () {
     //DOM ready
@@ -41,6 +62,8 @@ var mac_mailchimp = function () {
 
     jQuery('#close_popup').on('click', function () {
       jQuery('#popup_container').removeClass('displayed');
+      jQuery('#form_container').removeClass('hidden');
+      jQuery('#register_success').removeClass('displayed');
       jQuery('#form').trigger('reset');
       validator.resetForm();
     });
