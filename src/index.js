@@ -106,7 +106,27 @@ function mac_mailchimp() {
               }
               else {
                 //the subscription failed
-                alert("bug");
+                if(result.title="Member Exists"){
+                  error_msg="";
+                  switch(language){
+                    case 'fr-fr':
+                      error_msg="Cet email est déjà enregistré";
+                      break;
+                    case 'de-de':
+                      error_msg="Dieser email ist schon registriert";
+                      break;
+                    case 'it-it':
+                      error_msg="Questo e-mail è registrato già";
+                      break;
+                  }
+                  alert(error_msg);
+                  //or display it wherever you want
+                }
+                else{
+                  error_msg="An error occured, please inform the administrator.";
+                  alert(error_msg);
+                  //or display it wherever you want
+                }
               }
             });
 
