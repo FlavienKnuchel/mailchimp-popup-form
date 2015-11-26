@@ -24,18 +24,7 @@ loadjscssfile(cssUrl, 'css');
  */
 
 //to comment if using the above code
-
-//this loads jquery if not already loaded
-if (typeof jQuery == 'undefined') {
-  var headTag = document.getElementsByTagName("head")[0];
-  var jqTag = document.createElement('script');
-  jqTag.type = 'text/javascript';
-  jqTag.src = 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js';
-  jqTag.onload = mac_mailchimp();
-  headTag.appendChild(jqTag);
-} else {
-  mac_mailchimp();
-}
+mac_mailchimp();
 // end to comment
 
 

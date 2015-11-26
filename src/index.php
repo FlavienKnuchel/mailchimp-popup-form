@@ -19,12 +19,8 @@
 
 <div id="container" class="col-md-offset-3 col-sm-6">
 
-
-
       <?php include('popup_button.php'); ?>
       <?php include('popup_form.php'); ?>
-
-
 
 </div>
 
