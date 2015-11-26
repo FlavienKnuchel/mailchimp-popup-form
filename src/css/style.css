@@ -1,0 +1,13 @@
+body .btn-primary{margin-top:20px;cursor:pointer}
+body h1{margin-top:0}
+body form #submit{margin-top:15px;display:-webkit-box;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}
+body form .errorlabel{margin-top:5px;color:#a94442}
+body #popup_container{position:fixed;width:100%;height:100%;top:0;left:0;display:none}
+body #popup_container.displayed{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}
+body #popup_container #popup_content.hidden,body #popup_container #register_success{display:none}
+body #popup_container #popup_content{position:relative;width:40%;background:#fff;padding:25px;border-radius:5px;z-index:1002}
+@media (max-width:1035px){body #popup_container #popup_content{width:95%;padding:20px}
+}
+body #popup_container #register_success.displayed{display:block}
+body #popup_container #popup_mask{background:rgba(41,41,41,.32);position:absolute;width:100%;height:100%;top:0;left:0;z-index:1001}
+body #popup_container #popup_mask:hover{cursor:pointer}
