@@ -1,12 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: fku
- * Date: 19/11/15
- * Time: 08:32
- */
-?>
-
 <!DOCTYPE html>
 <html>
 

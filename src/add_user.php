@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: fku
- * Date: 25/11/15
- * Time: 10:18
- */
 
 //include the mailchimp-api library
 //(PHP simple wrapper for Mailchim API V3.0)

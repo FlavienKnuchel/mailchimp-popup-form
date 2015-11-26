@@ -1,11 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: fku
- * Date: 19/11/15
- * Time: 08:32
- */
-?>
 <!-- popup containing the mailchimp subscribing form -->
 <div id="popup_container" style="display: none">
   <div id="popup_content">
