@@ -2,7 +2,7 @@
 var baseUrl = window.location.protocol + "//" + window.location.host;
 var pluginUrl = baseUrl + '/src/';
 
-// dynamically load css via js (tox fix display as soon as possible)
+// dynamically load css via js (to fix display as soon as possible)
 var cssUrl = pluginUrl + '/css/style.css';
 loadjscssfile(cssUrl, 'css');
 
@@ -173,15 +173,17 @@ function mac_mailchimp() {
           //behaviour of the error highlight
           highlight: function (element, errorClass, validClass) {
             jQuery(element).parent().addClass(errorClass).removeClass(validClass);
-            jQuery('span.glyphicon', jQuery(element).parent()).remove();
-            jQuery(element).after('<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>');
+            // bootstrap only behavior
+            //jQuery('span.glyphicon', jQuery(element).parent()).remove();
+            //jQuery(element).after('<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>');
           },
 
           // behaviour of the success highlight
           unhighlight: function (element, errorClass, validClass) {
             jQuery(element).parent().removeClass(errorClass).addClass(validClass);
-            jQuery('span.glyphicon', jQuery(element).parent()).remove();
-            jQuery(element).after('<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>');
+            // bootstrap only behavior
+            //jQuery('span.glyphicon', jQuery(element).parent()).remove();
+            //jQuery(element).after('<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>');
           }
         });// end validator
 

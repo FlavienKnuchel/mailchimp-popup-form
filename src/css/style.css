@@ -1,4 +1,5 @@
-body .btn-primary{margin-top:20px;cursor:pointer}
+body #subscribe_newsletter_button{margin-top:20px;cursor:pointer}
+body #subscribe_newsletter_button:hover{text-decoration:underline}
 body h1{margin-top:0}
 body form #submit{margin-top:15px;display:-webkit-box;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-direction:row}
 body form .errorlabel{margin-top:5px;color:#a94442}

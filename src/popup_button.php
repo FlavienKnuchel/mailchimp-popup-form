@@ -1,1 +1,1 @@
-<a id="subscribe_newsletter_button" class="btn btn-primary btn-lg">Subscribe to Newsletter</a>
+<a id="subscribe_newsletter_button">Subscribe to Newsletter</a>
