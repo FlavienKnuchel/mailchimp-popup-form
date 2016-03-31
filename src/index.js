@@ -106,7 +106,7 @@ function mac_mailchimp() {
               }
               else {
                 //the subscription failed
-                if(result.title="Member Exists"){
+                if(result.title=="Member Exists"){
                   error_msg="";
                   switch(language){
                     case 'fr-fr':
